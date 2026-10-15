@@ -52,14 +52,13 @@ export default function Hero() {
         {/* Photo placeholder: add /public/hira.jpg and swap the inner div for <Image /> */}
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.8 }} className="relative mx-auto w-full max-w-sm">
           <div className="grad-bg absolute inset-0 rotate-6 rounded-[2.5rem] opacity-60 blur-sm" />
-          <div className="glass relative aspect-[4/5] overflow-hidden rounded-[2.5rem] p-3">
-            <div className="grid h-full w-full place-items-center rounded-[2rem] bg-gradient-to-br from-violet-brand/30 to-rose-brand/30">
-              <span className="font-display text-7xl font-extrabold opacity-70">HA</span>
-            </div>
-          </div>
-          <div className="glass absolute -left-6 top-12 flex animate-float items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold"><Code2 size={16} className="text-violet-brand" /> Clean code</div>
-          <div className="glass absolute -right-4 bottom-16 flex animate-float items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold [animation-delay:-3s]"><Search size={16} className="text-rose-brand" /> SEO first</div>
-        </motion.div>
+<div className="glass relative aspect-[4/5] overflow-hidden rounded-[2.5rem] p-3">
+  <img
+    src="/hira.jpg"
+    alt="Hira Ansari"
+    className="h-full w-full object-cover rounded-[2rem]"
+  />
+</div>
       </div>
       <a href="#about" aria-label="Scroll down" className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce muted"><ArrowDown /></a>
     </section>
