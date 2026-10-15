@@ -32,7 +32,7 @@ export default function Contact() {
           <h2 className="font-display text-4xl font-bold sm:text-5xl">Let's build your <span className="grad-text">next website.</span></h2>
           <p className="muted mt-5">Tell me what you need and your timeline. I'll get back to you with next steps.</p>
           <ul className="mt-8 space-y-3 text-sm font-medium">
-            <li className="flex items-center gap-3"><Mail size={18} className="text-violet-brand" /> hello@yourdomain.com</li>
+            <li className="flex items-center gap-3"><Mail size={18} className="text-violet-brand" /> ansari26hira@gmail.com.</li>
             <li className="flex items-center gap-3"><MapPin size={18} className="text-rose-brand" /> Hyderabad, Sindh, Pakistan</li>
           </ul>
         </Reveal>
