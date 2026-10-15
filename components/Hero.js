@@ -25,7 +25,7 @@ export default function Hero() {
 
           <h1 className="font-display text-5xl font-extrabold leading-[0.9] tracking-tight md:text-6xl lg:text-7xl">
             <span className="block">Hi, I&apos;m</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-blue-500">Hira Amanat</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-blue-500">Hira Ansari</span>
             <span className="mt-2 flex items-center gap-3">
               <span className="text-2xl md:text-3xl">I build</span>
               <span className="relative block h-[1.1em] w-[320px] overflow-hidden">
@@ -52,7 +52,7 @@ export default function Hero() {
           <div className="glass relative aspect-[4/5] overflow-hidden rounded-[2.5rem] p-3">
             <img
               src="/hira.jpg"
-              alt="Hira Amanat"
+              alt="Hira Ansari"
               className="h-full w-full object-cover rounded-[2rem]"
             />
           </div>
