@@ -5,25 +5,25 @@ const projects = [
     title: "AI-Assistant Portal",
     description: "To secure office files and documents",
     tech: ["HTML", "CSS", "JavaScript"],
-    link: "https://officedoc.xo.je/"
+    link: "https://officedoc.xo.je/",
   },
   {
     title: "Wipe Hero - Cleaning Service Website",
     description: "Provides car wash and other cleaning services. WordPress template.",
     tech: ["WordPress"],
-    link: "https://hira-portfolio-rust.vercel.app/#projects"
+    link: "https://car-wash1.xo.je/?i=1",
   },
   {
     title: "Portfolio",
     description: "Showcase your skills",
     tech: ["HTML", "CSS", "JavaScript"],
-    link: "https://hiraansari.rf.gd/?i=1"
+    link: "https://hiraansari.rf.gd/?i=1",
   },
   {
     title: "E-Learning Platform",
     description: "Online learning platform to showcase courses and skills",
     tech: ["HTML", "CSS", "JavaScript"],
-    link: "#"
+    link:  "https://ansarihira.free.je/",
   }
 ];
 
