@@ -1,67 +1,53 @@
-"use client";
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowDown, Sparkles, Search, Code, Zap } from "lucide-react";
+import { useState, useEffect } from 'react';
 
-const words = ["Fast websites", "Wordpress builds", "Elementor layouts", "SEO-ready pages"];
+const words = ["Fast", "Wordpress", "SEO-friendly", "Responsive"];
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
+
   useEffect(() => {
-    const i = setInterval(() => setIndex((o) => (o + 1) % words.length), 2000);
-    return () => clearInterval(i);
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % words.length);
+    }, 2000);
+    return () => clearInterval(timer);
   }, []);
 
   return (
-    <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-20 md:px-8">
-      <div className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-violet-500/20 blur-3xl" />
-      <div className="pointer-events-none absolute -left-20 bottom-0 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl" />
-
-      <div className="relative z-10 grid w-full max-w-6xl grid-cols-1 gap-10 md:grid-cols-2">
-        <div className="flex flex-col justify-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="glass mb-6 inline-flex w-fit items-center gap-2 rounded-full px-4 py-2 text-sm">
-            <Sparkles size={16} /> Open for freelance projects
-          </motion.div>
-
-          <h1 className="font-display text-5xl font-extrabold leading-[0.9] tracking-tight md:text-6xl lg:text-7xl">
-            <span className="block">Hi, I&apos;m</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-blue-500">Hira Ansari</span>
-            <span className="mt-2 flex items-center gap-3">
-              <span className="text-2xl md:text-3xl">I build</span>
-              <span className="relative block h-[1.1em] w-[320px] overflow-hidden">
-                <AnimatePresence mode="wait">
-                  <motion.span key={index} initial={{ y: "100%", opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: "-100%", opacity: 0 }} transition={{ duration: 0.4 }} className="absolute inset-0">
-                    {words[index]}
-                  </motion.span>
-                </AnimatePresence>
-              </span>
-            </span>
+    <section className="min-h-[85vh] flex items-center px-6 py-12 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
+        <div>
+          <div className="inline-block bg-white/10 border-white/10 rounded-full px-4 py-1 text-sm mb-6 text-gray-200 dark:text-gray-300">
+            Open for freelance projects
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-3 text-gray-900 dark:text-white">
+            Hi, I'm <span className="text-blue-500">Hira Ansari</span>
           </h1>
-
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="mt-6 max-w-xl text-lg text-white/70">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white h-12">
+            I build{" "}
+            <span key={index} className="inline-block text-blue-500 min-w-[180px]">
+              {words[index]}
+            </span>
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-lg leading-relaxed">
             Web developer from Hyderabad, Pakistan. I turn ideas into clean, quick websites that look sharp and work well.
-          </motion.p>
-
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a href="#projects" className="glass rounded-full px-7 py-3.5 font-semibold transition hover:bg-white hover:text-black">View Projects</a>
-            <a href="#contact" className="glass rounded-full px-7 py-3.5 font-semibold transition hover:bg-white/20">Contact Me</a>
+          </p>
+          <div className="flex gap-4">
+            <a href="#projects" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition">
+              View Projects
+            </a>
+            <a href="#contact" className="border border-gray-400 dark:border-gray-600 hover:bg-white/10 px-6 py-3 rounded-full font-medium transition text-gray-900 dark:text-white">
+              Contact Me
+            </a>
           </div>
         </div>
-
-        <motion.div initial={{ scale: 0.9, rotate: -3 }} animate={{ scale: 1, rotate: 0 }} transition={{ delay: 0.4, duration: 0.8 }} className="relative mx-auto w-full max-w-[360px]">
-          <div className="glass relative aspect-[4/5] overflow-hidden rounded-[2.5rem] p-3">
-            <img
-              src="/hira.jpg"
-              alt="Hira Ansari"
-              className="h-full w-full object-cover rounded-[2rem]"
-            />
-          </div>
-        </motion.div>
+        <div className="flex justify-center">
+          <img
+            src="/hira.jpg"
+            alt="Hira Ansari"
+            className="w-72 h-72 md:w-80 md:h-80 object-cover rounded-2xl border-gray-200 dark:border-gray-700 shadow-xl"
+          />
+        </div>
       </div>
-
-      <a href="#about" aria-label="Scroll down" className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown />
-      </a>
     </section>
   );
 }
